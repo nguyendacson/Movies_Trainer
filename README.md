@@ -84,5 +84,6 @@ Fork this repo
 4. Submit a pull request
 
 ## Authors and Acknowledgment
-* Developed by Nguyễn Đắc Sơn
+* Developed by Nguyễn Đắc Sơn 
+* Email: dacson1822003@gmail.com 
 * Special thanks to internship mentors and reviewers.
