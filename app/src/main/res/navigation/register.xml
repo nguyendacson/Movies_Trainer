@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/registerFragment">
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.movies.fragment.ui.auth.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/LoginConnectSignUp"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/LoginConnectProfile"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/LoginConnectRegister"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/LoginConnect1"
+            app:destination="@id/navGraphFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.example.movies.fragment.ui.auth.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up">
+        <action
+            android:id="@+id/SignUpConnectRegister"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/SignUpConnectLogin"
+            app:destination="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.movies.fragment.ui.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <deepLink app:uri="movies://register" />
+        <action
+            android:id="@+id/RegisterConnectLogin"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_registerFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.movies.fragment.ui.auth.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/ProfileConnectRegister"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/navGraphFragment"
+        android:name="com.example.movies.fragment.ui.menu.NavGraphFragment"
+        android:label="fragment_nav_graph"
+        tools:layout="@layout/fragment_nav_graph">
+        <action
+            android:id="@+id/action_global_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_navGraphFragment_to_allMovieNowPlayFragment"
+            app:destination="@id/allMovieNowPlayFragment" />
+        <action
+            android:id="@+id/action_navGraphFragment_to_allMovieTrendingFragment"
+            app:destination="@id/allMovieTrendingFragment" />
+        <action
+            android:id="@+id/action_navGraphFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.movies.fragment.ui.detail.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="movie"
+            app:argType="com.example.movies.database.movie.MovieData"
+            app:nullable="false" />
+        <action
+            android:id="@+id/action_detailFragment_to_navGraphFragment"
+            app:destination="@id/navGraphFragment" />
+        <action
+            android:id="@+id/action_detailFragment_to_trailerFragment"
+            app:destination="@id/trailerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trailerFragment"
+        android:name="com.example.movies.fragment.ui.detail.TrailerFragment"
+        android:label="fragment_trailer"
+        tools:layout="@layout/fragment_trailer" />
+    <fragment
+        android:id="@+id/allMovieNowPlayFragment"
+        android:name="com.example.movies.fragment.ui.menu.AllMovieNowPlayFragment"
+        android:label="fragment_all_movie_now_play"
+        tools:layout="@layout/fragment_all_movie_now_play">
+        <action
+            android:id="@+id/action_allMovieNowPlayFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_allMovieNowPlayFragment_to_navGraphFragment"
+            app:destination="@id/navGraphFragment" />
+        <action
+            android:id="@+id/action_allMovieNowPlayFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allMovieTrendingFragment"
+        android:name="com.example.movies.fragment.ui.menu.AllMovieTrendingFragment"
+        android:label="fragment_all_movie_trending"
+        tools:layout="@layout/fragment_all_movie_trending">
+        <action
+            android:id="@+id/action_allMovieTrendingFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_allMovieTrendingFragment_to_navGraphFragment"
+            app:destination="@id/navGraphFragment" />
+        <action
+            android:id="@+id/action_allMovieTrendingFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/filterFragment"
+        android:name="com.example.movies.fragment.ui.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter">
+        <argument
+            android:name="filterTitle"
+            app:argType="string"
+            android:defaultValue="Filter" />
+    </fragment>
+</navigation>

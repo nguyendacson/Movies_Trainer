@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ui.menu.AllMovieNowPlayFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_all_screen">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintFirstMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingHorizontal="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/btnBackNowPlay"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:padding="3dp"
+                android:src="@drawable/btn_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/CustomTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Now Play"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="ContentDescription,HardcodedText,MissingConstraints" />
+
+            <ImageView
+                android:id="@+id/btnFilterNowPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/btn_dot"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerAllNowPlay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:paddingVertical="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraintFirstMain"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

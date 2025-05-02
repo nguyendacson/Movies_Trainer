@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ui.menu.WatchListFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_all_screen"
+        android:paddingTop="15dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title1_Textview"
+            style="@style/CustomTextViewStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/watch_list"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1_Textview"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mainItemList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="25dp"
+                android:paddingHorizontal="25dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:ignore="NotSibling" />
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/hintConstraint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="false"
+            android:focusable="false"
+            android:orientation="vertical"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageSearchNull"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:src="@drawable/magic_box"
+                app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
+                app:layout_constraintStart_toStartOf="@+id/hintConstraint"
+                tools:ignore="ContentDescription,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvSearchNull1"
+                style="@style/CustomTextMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="There is no movie yet!"
+                app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
+                app:layout_constraintStart_toStartOf="@+id/hintConstraint"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearchNull"
+                tools:ignore="HardcodedText,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvSearchNull3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Find your movie by Type title,"
+                android:textColor="#92929D"
+                app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
+                app:layout_constraintStart_toStartOf="@+id/hintConstraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvSearchNull1"
+                tools:ignore="HardcodedText,MissingConstraints" />
+
+            <TextView
+                android:id="@+id/tvSearchNull4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="categories, years, etc "
+                android:textColor="#92929D"
+                app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
+                app:layout_constraintStart_toStartOf="@+id/hintConstraint"
+                app:layout_constraintTop_toBottomOf="@+id/tvSearchNull3"
+                tools:ignore="HardcodedText,MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
