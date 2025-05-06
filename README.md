@@ -60,13 +60,13 @@ JDK 21+
 Internet access (for movie API)
 
 ## Roadmap
-### Add login with Google
+* Add login with Google
 
-### Implement dark mode
+* Implement dark mode
 
-### Add unit tests
+* Add unit tests
 
-### Deploy to Play Store
+* Deploy to Play Store
 
 ## Contributing
 ### Contributions are welcome! Please fork the repository and submit a pull request.
@@ -84,6 +84,6 @@ Fork this repo
 4. Submit a pull request
 
 ## Authors and Acknowledgment
-* Developed by Nguyễn Đắc Sơn 
+* Developed by Nguyễn Đắc Sơn   
 * Email: dacson1822003@gmail.com 
 * Special thanks to internship mentors and reviewers.
