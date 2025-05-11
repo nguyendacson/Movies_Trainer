@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_all_screen"
+        android:background="@drawable/custom_bg_all_screen"
         android:paddingTop="15dp"
         android:paddingBottom="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -64,7 +64,7 @@
                 android:id="@+id/imageSearchNull"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:src="@drawable/magic_box"
+                android:src="@drawable/img_magic_box"
                 app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
                 app:layout_constraintStart_toStartOf="@+id/hintConstraint"
                 tools:ignore="ContentDescription,MissingConstraints" />

@@ -10,26 +10,27 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_all_screen"
+        android:background="@drawable/custom_bg_all_screen"
         android:paddingTop="30dp">
 
-        <Button
-            android:id="@+id/btnSearchHome"
+        <TextView
+            android:id="@+id/tvSearchHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="40dp"
-            android:background="@drawable/custom_edittext_search_bg"
+            android:background="@drawable/custom_edt_rectangle_purple"
             android:clickable="true"
             android:drawableEnd="@drawable/btn_search"
             android:gravity="center_vertical"
             android:maxLines="1"
             android:paddingHorizontal="20dp"
             android:text="@string/search"
-            android:textColor="@color/menuBeforeDetail"
+            android:textColor="#84FFFFFF"
             app:backgroundTint="@null"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="UseCompatTextViewDrawableXml" />
 
         <ScrollView
             android:id="@+id/scrollView"
@@ -38,7 +39,7 @@
             android:layout_marginTop="5dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/btnSearchHome">
+            app:layout_constraintTop_toBottomOf="@id/tvSearchHome">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/linearLayout1"
@@ -154,7 +155,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/bg_all_screen"
+                android:src="@drawable/custom_bg_all_screen"
                 tools:ignore="ContentDescription" />
 
             <ImageView
@@ -162,7 +163,7 @@
                 android:layout_height="150dp"
                 android:layout_gravity="center"
                 android:scaleType="fitCenter"
-                android:src="@drawable/bg_login_screen"
+                android:src="@drawable/img_waiting"
                 tools:ignore="ContentDescription" />
         </FrameLayout>
 

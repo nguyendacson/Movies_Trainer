@@ -18,7 +18,7 @@
             android:id="@+id/imageUserCast"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@drawable/custom_button_selector"
+            android:background="@drawable/custom_btn_circle_light_blue"
             android:scaleType="centerCrop"
             tools:ignore="ContentDescription" />
 

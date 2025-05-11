@@ -1,6 +1,5 @@
 package com.example.movies.fragment.ui.detail
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,12 +19,11 @@ class AboutMovieFragment : Fragment() {
         return binding.root
     }
 
-    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val dataOverView = arguments?.getString("data")
         view.findViewById<TextView>(R.id.overviewMovie).text =
-            if (dataOverView.isNullOrEmpty()) "No About Movie" else dataOverView
+            if (dataOverView == "null" || dataOverView.isNullOrEmpty()) "No About Movie" else dataOverView
     }
 }

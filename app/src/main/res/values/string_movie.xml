@@ -15,7 +15,7 @@
     <string name="trending">Trending</string>
     <string name="password">Password</string>
     <string name="email_or_mobile_number">Email or Mobile Number</string>
-    <string name="content_login">Welcome to the internship training course of Extreme Vietnam.</string>
+    <string name="content_login">Welcome to the app Movies!</string>
     <string name="hint_input">" "</string>
     <string name="forget_password">Forget Password ?</string>
     <string name="sign_up">Sign Up</string>
@@ -31,4 +31,11 @@
     <string name="search_filters">Search filters</string>
     <string name="sort_by">Sort by</string>
     <string name="type">Type</string>
+    <string name="convert_data">%.1f</string>
+    <string name="null_data">--</string>
+
+    <!--Now movie-->
+    <string name="list_nowPlay_movies">List Movies Now Play</string>
+    <!--Now movie-->
+    <string name="list_trending_movies">List Movies Now Play</string>
 </resources>

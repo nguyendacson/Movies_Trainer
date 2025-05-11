@@ -18,6 +18,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.movies.R
 import com.example.movies.adapter.movie.AdapterMovie
 import com.example.movies.api.ApiMovie
@@ -61,6 +62,8 @@ class SearchFragment : Fragment() {
             requireContext().getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         imm.showSoftInput(binding.edtSearch, InputMethodManager.SHOW_IMPLICIT)
 
+        val spanCount = if (isTablet()) 2 else 1
+        binding.mainItemSearch.layoutManager = GridLayoutManager(requireContext(), spanCount)
         binding.mainItemSearch.setHasFixedSize(true)
 
         if (searchAdapter == null) {
@@ -132,6 +135,12 @@ class SearchFragment : Fragment() {
         binding.btnFilter.setOnClickListener {
             sentTitleFilter()
         }
+    }
+
+    private fun isTablet(): Boolean {
+        val displayMetrics = resources.displayMetrics
+        val widthDp = displayMetrics.widthPixels / displayMetrics.density
+        return widthDp >= 600
     }
 
     private fun onClickItem() {

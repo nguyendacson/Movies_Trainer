@@ -43,7 +43,7 @@ class AdapterMovieReview :
         fun binView(item: ReviewMovieDetailData, context: Context) {
             Glide.with(imageUser.context)
                 .load(item.authorDetails.avatarPath.toImageUrl())
-                .error(R.drawable.image_user_review)
+                .error(R.drawable.img_user)
                 .circleCrop()
                 .into(imageUser)
             nameUser.text = item.author

@@ -38,7 +38,7 @@ class AdapterMovieCast : ListAdapter<CastMovieDetailData, AdapterMovieCast.CastH
             nameCast.text = item.name
             Glide.with(imageCast.context)
                 .load(item.profile_path.toImageUrl())
-                .error(R.drawable.image_user_review)
+                .error(R.drawable.img_user)
                 .circleCrop()
                 .into(imageCast)
         }

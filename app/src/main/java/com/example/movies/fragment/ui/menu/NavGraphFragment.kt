@@ -8,9 +8,11 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.example.movies.R
 import com.example.movies.adapter.movie.AdapterViewPager
+import com.example.movies.database.movie.MovieData
 import com.example.movies.databinding.FragmentNavGraphBinding
 import com.example.movies.fragment.ui.auth.ProfileFragment
-import com.example.movies.database.movie.MovieData
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationView
 
 @Suppress("DEPRECATION")
 class NavGraphFragment : Fragment() {
@@ -18,8 +20,7 @@ class NavGraphFragment : Fragment() {
     private val binding get() = navBinding!!
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
         navBinding = FragmentNavGraphBinding.inflate(inflater, container, false)
         return binding.root
@@ -29,27 +30,40 @@ class NavGraphFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val fragments = listOf(
-            HomeFragment(),
-            SearchFragment(),
-            WatchListFragment(),
-            ProfileFragment()
+            HomeFragment(), SearchFragment(), WatchListFragment(), ProfileFragment()
         )
 
         val adapter = AdapterViewPager(this, fragments)
         binding.pagerMain.adapter = adapter
         binding.pagerMain.isUserInputEnabled = false
 
-        binding.bottomNav.setOnItemSelectedListener { item ->
-            when (item.itemId) {
-                R.id.buttonHome -> binding.pagerMain.currentItem = 0
-                R.id.buttonSearch -> binding.pagerMain.currentItem = 1
-                R.id.buttonWatchList -> binding.pagerMain.currentItem = 2
-                R.id.buttonProfile -> binding.pagerMain.currentItem = 3
+        when (val navView = binding.root.findViewById<View>(R.id.bottomNav)) {
+            is BottomNavigationView -> {
+                navView.setOnItemSelectedListener { item ->
+                    handleNavigationItem(item.itemId)
+                    true
+                }
             }
-            true
+
+            is NavigationView -> {
+                navView.setNavigationItemSelectedListener { item ->
+                    handleNavigationItem(item.itemId)
+                    true
+                }
+            }
         }
+
         getDataHomeToDetail()
         getFilter()
+    }
+
+    private fun handleNavigationItem(itemId: Int) {
+        when (itemId) {
+            R.id.buttonHome -> binding.pagerMain.currentItem = 0
+            R.id.buttonSearch -> binding.pagerMain.currentItem = 1
+            R.id.buttonWatchList -> binding.pagerMain.currentItem = 2
+            R.id.buttonProfile -> binding.pagerMain.currentItem = 3
+        }
     }
 
     private fun getDataHomeToDetail() {
@@ -64,7 +78,7 @@ class NavGraphFragment : Fragment() {
         }
     }
 
-    private fun getFilter(){
+    private fun getFilter() {
         requireActivity().supportFragmentManager.setFragmentResultListener(
             "keyScreenTitle", viewLifecycleOwner
         ) { _, bundle ->
@@ -76,8 +90,15 @@ class NavGraphFragment : Fragment() {
 
     fun switchToSearchTab() {
         binding.pagerMain.currentItem = 1
-        binding.bottomNav.selectedItemId = R.id.buttonSearch
+
+        val bottomNavView = binding.root.findViewById<View>(R.id.bottomNav)
+        if (bottomNavView is BottomNavigationView) {
+            bottomNavView.selectedItemId = R.id.buttonSearch
+        } else if (bottomNavView is NavigationView) {
+            bottomNavView.setCheckedItem(R.id.buttonSearch)
+        }
     }
+
 
     override fun onDestroy() {
         super.onDestroy()

@@ -18,10 +18,8 @@ output.json
 
 # IntelliJ
 *.iml
-.idea/
-misc.xml
-deploymentTargetDropDown.xml
-render.experimental.xml
+
+*.idea/
 
 # Keystore files
 *.jks
@@ -38,3 +36,5 @@ src/main/java/com/example/movies/api/
 
 ### Android Patch ###
 gen-external-apklibs
+
+.

@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_all_screen"
+        android:background="@drawable/custom_bg_all_screen"
         android:orientation="vertical"
         android:paddingHorizontal="18dp"
         android:paddingVertical="10dp"
@@ -58,7 +58,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="center"
-                        android:background="@drawable/custom_button_selector"
+                        android:background="@drawable/custom_btn_circle_light_blue"
                         android:gravity="center"
                         app:backgroundTint="@null"
                         tools:ignore="ContentDescription" />
@@ -73,11 +73,10 @@
                         tools:ignore="RtlHardcoded">
 
                         <Button
-                            android:id="@+id/btn_editAvata"
+                            android:id="@+id/btn_edit_avatar"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="@drawable/custom_button_blue"
-                            android:src="@drawable/btn_google"
+                            android:background="@drawable/custom_btn_oval_blue"
                             app:backgroundTint="@null"
                             tools:ignore="ContentDescription" />
 
@@ -85,7 +84,7 @@
                             android:layout_width="18dp"
                             android:layout_height="18dp"
                             android:layout_gravity="center"
-                            android:background="@drawable/btn_pencil_edit"
+                            android:background="@drawable/btn_camera"
                             tools:ignore="ContentDescription" />
                     </FrameLayout>
                 </FrameLayout>
@@ -138,7 +137,7 @@
         android:layout_height="280dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="30dp"
-        android:background="@drawable/custom_bg_profile_logout"
+        android:background="@drawable/custom_bg_square_white"
         android:orientation="vertical"
         android:visibility="gone"
         android:weightSum="10"
@@ -190,7 +189,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_button_white"
+                android:background="@drawable/custom_btn_oval_light_blue"
                 android:gravity="center"
                 android:text="Cancel"
                 android:textColor="#2260FF"
@@ -205,7 +204,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
                 android:layout_weight="1"
-                android:background="@drawable/custom_button_blue"
+                android:background="@drawable/custom_btn_oval_blue"
                 android:gravity="center"
                 android:text="Yes, Logout"
                 android:textColor="#FFFFFF"

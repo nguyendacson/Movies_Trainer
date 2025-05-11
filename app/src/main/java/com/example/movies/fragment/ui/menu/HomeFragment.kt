@@ -63,7 +63,7 @@ class HomeFragment : Fragment() {
         }
 
 
-        binding.btnSearchHome.setOnClickListener {
+        binding.tvSearchHome.setOnClickListener {
             val parentFragment = requireParentFragment() as NavGraphFragment
             parentFragment.switchToSearchTab()
         }

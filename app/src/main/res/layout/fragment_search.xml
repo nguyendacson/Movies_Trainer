@@ -9,7 +9,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_all_screen"
+        android:background="@drawable/custom_bg_all_screen"
         android:paddingTop="20dp"
         android:paddingBottom="5dp">
 
@@ -48,7 +48,7 @@
                 android:layout_width="0dp"
                 android:layout_height="46dp"
                 android:layout_marginStart="35dp"
-                android:background="@drawable/custom_edittext_search_bg"
+                android:background="@drawable/custom_edt_rectangle_purple"
                 android:drawableEnd="@drawable/btn_search"
                 android:hint="@string/search"
                 android:imeOptions="actionSearch"
@@ -105,7 +105,7 @@
                 android:id="@+id/imageSearchNull"
                 android:layout_width="75dp"
                 android:layout_height="75dp"
-                android:src="@drawable/image_search"
+                android:src="@drawable/img_search"
                 app:layout_constraintEnd_toEndOf="@+id/hintConstraint"
                 app:layout_constraintStart_toStartOf="@+id/hintConstraint"
                 tools:ignore="ContentDescription,MissingConstraints" />

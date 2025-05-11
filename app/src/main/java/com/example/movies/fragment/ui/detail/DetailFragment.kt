@@ -25,6 +25,7 @@ import com.example.movies.databinding.FragmentDetailBinding
 import com.example.movies.fragment.factory.detail.DetailFactory
 import com.example.movies.fragment.repository.detail.DetailMovieRepository
 import com.example.movies.fragment.ui.ErrorView
+import com.example.movies.fragment.ui.toImageUrl
 import com.example.movies.fragment.viewmodel.detail.DetailMovieViewModel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
@@ -84,14 +85,6 @@ class DetailFragment : Fragment() {
             onClickSave()
         }
 
-        val textAbout = binding.tvAbout
-        val textReview = binding.tvReviews
-        val textCast = binding.tvCast
-        val viewAbout = binding.viewAbout
-        val viewReview = binding.viewReview
-        val viewCast = binding.viewCast
-
-
         fun createAnimation(): TranslateAnimation {
             return TranslateAnimation(
                 -500f, 0f, 0f, 0f
@@ -101,33 +94,57 @@ class DetailFragment : Fragment() {
             }
         }
 
-        textAbout.post {
-            textAbout.performClick()
+        binding.tvAbout.post {
+            binding.tvAbout.performClick()
         }
 
         binding.btnBackDetail.setOnClickListener {
             findNavController().navigateUp()
         }
 
-        textAbout.setOnClickListener {
+        binding.tvAbout.setOnClickListener {
             val aboutMovie = AboutMovieFragment()
             replaceView(aboutMovie, movieDetail?.overview.toString())
-            setSelectedTab(1, textAbout, textReview, textCast, viewAbout, viewReview, viewCast)
-            viewAbout.startAnimation(createAnimation())
+            setSelectedTab(
+                1,
+                binding.tvAbout,
+                binding.tvReviews,
+                binding.tvCast,
+                binding.viewAbout,
+                binding.viewReview,
+                binding.viewCast
+            )
+            binding.viewAbout.startAnimation(createAnimation())
         }
 
-        textReview.setOnClickListener {
+        binding.tvReviews.setOnClickListener {
             val reviewMovieFragment = ReviewMovieFragment()
             replaceView(reviewMovieFragment, movieDetail?.id.toString())
-            setSelectedTab(2, textReview, textAbout, textCast, viewReview, viewAbout, viewCast)
-            viewReview.startAnimation(createAnimation())
+            setSelectedTab(
+                2,
+                binding.tvReviews,
+                binding.tvAbout,
+                binding.tvCast,
+                binding.viewReview,
+                binding.viewAbout,
+                binding.viewCast
+            )
+            binding.viewReview.startAnimation(createAnimation())
         }
 
-        textCast.setOnClickListener {
+        binding.tvCast.setOnClickListener {
             val castMovieFragment = CastMovieFragment()
             replaceView(castMovieFragment, movieDetail?.id.toString())
-            setSelectedTab(3, textCast, textReview, textAbout, viewCast, viewReview, viewAbout)
-            viewCast.startAnimation(createAnimation())
+            setSelectedTab(
+                3,
+                binding.tvCast,
+                binding.tvReviews,
+                binding.tvAbout,
+                binding.viewCast,
+                binding.viewReview,
+                binding.viewAbout
+            )
+            binding.viewCast.startAnimation(createAnimation())
         }
 
     }
@@ -148,41 +165,53 @@ class DetailFragment : Fragment() {
         fadeIn.start()
     }
 
-    @SuppressLint("DefaultLocale", "SetTextI18n")
     private fun setView() {
         Glide.with(binding.itemImage.context)
-            .load("https://image.tmdb.org/t/p/w500${movieDetail?.poster_path}")
+            .load(movieDetail?.poster_path.toImageUrl())
             .into(binding.itemImage)
         Glide.with(requireContext())
-            .load(movieDetail?.backdrop_path?.let { "https://image.tmdb.org/t/p/w500$it" })
-//            .placeholder(R.drawable.bg_login_screen)
-            .error(R.drawable.bg_login_screen).into(binding.itemBackDrop ?: return)
-        binding.numberStarDetail.text = String.format("%.1f", movieDetail?.vote_average)
+            .load(movieDetail?.backdrop_path?.toImageUrl())
+            .error(R.drawable.img_waiting).into(binding.itemBackDrop)
+        binding.numberStarDetail.text =
+            String.format(getString(R.string.convert_data), movieDetail?.vote_average)
         binding.nameMovie.text = movieDetail?.original_title
-        binding.tvCalendarDetail.text = movieDetail?.release_date?.substring(0, 4)
-        binding.tvMinutesDetail.text = timeRun
+
+        binding.tvCalendarDetail.text =
+            formatTextOrDefault(movieDetail?.release_date, { it.substring(0, 4) })
+
+        binding.tvMinutesDetail.text = formatTextOrDefault(timeRun)
+
+    }
+
+    private fun formatTextOrDefault(
+        value: String?,
+        transform: (String) -> String = { it },
+        defaultText: String = getString(R.string.null_data)
+    ): String {
+        return if (!value.isNullOrBlank()) transform(value) else defaultText
     }
 
     private fun updateSaveButton() {
         if (saveList) {
-            binding.saveMovie.setImageResource(R.drawable.saved_movie)
+            binding.saveMovie.setImageResource(R.drawable.btn_after_favourite)
         } else {
             binding.saveMovie.setImageResource(R.drawable.btn_watchlist)
         }
     }
 
     private fun onClickSave() {
+        val message = "movie ${movieDetail?.title} to hit list"
         saveList = !saveList
         if (saveList) {
-            binding.saveMovie.setImageResource(R.drawable.saved_movie)
+            binding.saveMovie.setImageResource(R.drawable.btn_after_favourite)
             Toast.makeText(
-                requireContext(), "Add movie ${movieDetail?.title} to hit list", Toast.LENGTH_LONG
+                requireContext(), "Add $message", Toast.LENGTH_LONG
             ).show()
         } else {
             binding.saveMovie.setImageResource(R.drawable.btn_watchlist)
             Toast.makeText(
                 requireContext(),
-                "Delete movie ${movieDetail?.title} from list successfully",
+                "Delete $message",
                 Toast.LENGTH_LONG
             ).show()
         }

@@ -4,6 +4,10 @@
     <color name="white">#FFFFFFFF</color>
     <color name="menuBeforeDetail">#92929D</color>
     <color name="custom_error_color">#F0AC49</color>
-    <color name="blue">#2260FF</color>
+    <color name="blue">#0095FF</color>
+    <color name="green">#98FB98</color>
     <color name="blue2">#22B2FF</color>
+    <color name="light_gray">#CCCCCC</color>
+    <color name="light_blue">#CAD6FF</color>
+
 </resources>

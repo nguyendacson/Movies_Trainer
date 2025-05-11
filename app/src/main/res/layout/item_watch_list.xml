@@ -69,7 +69,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/image_star"
+                        android:src="@drawable/img_star"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -93,7 +93,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/image_ticket"
+                        android:src="@drawable/img_ticket"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -117,7 +117,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/image_calendar"
+                        android:src="@drawable/img_calendar"
                         tools:ignore="ContentDescription" />
 
                     <TextView
@@ -141,7 +141,7 @@
                     <ImageView
                         android:layout_width="16dp"
                         android:layout_height="16dp"
-                        android:src="@drawable/image_clock"
+                        android:src="@drawable/img_clock"
                         tools:ignore="ContentDescription" />
 
                     <TextView

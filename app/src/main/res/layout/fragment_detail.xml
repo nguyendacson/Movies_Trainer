@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_all_screen"
+    android:background="@drawable/custom_bg_all_screen"
     tools:context=".fragment.ui.detail.DetailFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,7 +44,7 @@
                 android:id="@+id/saveMovie"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
-                android:src="@drawable/image_before_detail"
+                android:src="@drawable/btn_before_favorite"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -105,7 +105,7 @@
                     android:layout_width="100dp"
                     android:layout_height="25dp"
                     android:layout_gravity="bottom"
-                    android:background="@drawable/custom_trailer_detail"
+                    android:background="@drawable/custom_bg_trailer"
                     android:gravity="center_horizontal"
                     android:paddingTop="3dp"
                     android:text="Trailer"
@@ -140,7 +140,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="30dp"
-                        android:background="@drawable/custom_star_detail"
+                        android:background="@drawable/custom_view_star"
                         android:paddingHorizontal="7dp"
                         android:paddingVertical="5dp"
                         app:backgroundTint="@null"
@@ -152,7 +152,7 @@
                             android:id="@+id/imageStar"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:src="@drawable/image_star"
+                            android:src="@drawable/img_star"
                             app:layout_constraintEnd_toStartOf="@+id/numberStarDetail"
                             tools:ignore="ContentDescription,MissingConstraints" />
 
@@ -161,7 +161,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="9.8"
-                            android:textColor="#FF8700"
+                            android:textColor="#FF9800"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent" />
                     </LinearLayout>
@@ -192,8 +192,9 @@
             app:layout_constraintTop_toBottomOf="@id/ConstraintMain1">
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="18dp"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="horizontal"
                 tools:ignore="MissingConstraints,UselessLeaf">
@@ -202,8 +203,8 @@
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginEnd="3dp"
-                    android:src="@drawable/image_calendar"
-                    app:tint="#808080"
+                    android:src="@drawable/img_calendar"
+                    app:tint="@color/light_gray"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -211,23 +212,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2021"
-                    android:textColor="#92929D"
+                    android:textColor="@color/light_gray"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/image_space"
-                    app:tint="#808080"
+                    android:src="@drawable/img_space"
+                    app:tint="@color/light_gray"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginEnd="3dp"
-                    android:src="@drawable/image_clock"
-                    app:tint="#808080"
+                    android:src="@drawable/img_clock"
+                    app:tint="@color/light_gray"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -235,23 +236,23 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="148 Minutes"
-                    android:textColor="#92929D"
+                    android:textColor="@color/light_gray"
                     tools:ignore="HardcodedText" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="10dp"
-                    android:src="@drawable/image_space"
-                    app:tint="#808080"
+                    android:src="@drawable/img_space"
+                    app:tint="@color/light_gray"
                     tools:ignore="ContentDescription" />
 
                 <ImageView
                     android:layout_width="18dp"
                     android:layout_height="18dp"
                     android:layout_marginEnd="3dp"
-                    android:src="@drawable/image_ticket"
-                    app:tint="#808080"
+                    android:src="@drawable/img_ticket"
+                    app:tint="@color/light_gray"
                     tools:ignore="ContentDescription" />
 
                 <TextView
@@ -259,7 +260,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Action"
-                    android:textColor="#92929D"
+                    android:textColor="@color/light_gray"
                     tools:ignore="HardcodedText" />
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -366,6 +367,7 @@
 
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/viewPageDetail"
+            android:name="com.example.movies.fragment.ui.detail.AboutMovieFragment"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="15dp"
@@ -375,6 +377,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/titleMain2"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints"
+            tools:layout="@layout/fragment_about_movie" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

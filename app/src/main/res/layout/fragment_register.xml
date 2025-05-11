@@ -10,7 +10,7 @@
         android:id="@+id/layoutContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/bg_all_screen"
+        android:background="@drawable/custom_bg_all_screen"
         android:orientation="vertical"
         android:paddingLeft="22dp"
         android:paddingRight="22dp"
@@ -27,7 +27,7 @@
                 android:layout_width="200dp"
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@drawable/bg_login_screen"
+                android:background="@drawable/img_waiting"
                 tools:ignore="ContentDescription"/>
         </LinearLayout>
 
@@ -37,13 +37,13 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:paddingTop="120dp">
+            android:paddingTop="100dp">
 
             <Button
                 android:id="@+id/btnLoginRegister"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button_blue"
+                android:background="@drawable/custom_btn_oval_blue"
                 android:text="Log In"
                 android:textSize="25sp"
                 app:backgroundTint="@null"
@@ -54,7 +54,7 @@
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
-                android:background="@drawable/custom_button_white"
+                android:background="@drawable/custom_btn_oval_light_blue"
                 android:text="Sign Up"
                 android:textColor="#2260FF"
                 android:textSize="25sp"
