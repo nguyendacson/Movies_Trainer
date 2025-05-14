@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     tools:context=".fragment.ui.menu.NavGraphFragment">
 
-    <!-- NavigationView cố định bên trái -->
     <com.google.android.material.navigation.NavigationView
         android:id="@+id/bottomNav"
         android:layout_width="200dp"
@@ -13,20 +12,19 @@
         android:background="@color/white"
         app:itemIconTint="@color/color_button_menu"
         app:itemTextColor="@color/color_button_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/menu_navigation" />
 
-    <!-- ViewPager chiếm phần còn lại -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/pagerMain"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:background="@color/black"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/bottomNav"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

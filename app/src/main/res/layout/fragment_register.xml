@@ -12,14 +12,12 @@
         android:layout_height="match_parent"
         android:background="@drawable/custom_bg_all_screen"
         android:orientation="vertical"
-        android:paddingLeft="22dp"
-        android:paddingRight="22dp"
         tools:ignore="UselessParent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_weight="1"
+            android:layout_weight="0.8"
             android:gravity="bottom"
             android:orientation="vertical">
 
@@ -28,7 +26,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal"
                 android:background="@drawable/img_waiting"
-                tools:ignore="ContentDescription"/>
+                tools:ignore="ContentDescription,ImageContrastCheck" />
         </LinearLayout>
 
         <LinearLayout
@@ -37,17 +35,16 @@
             android:layout_weight="1"
             android:gravity="center_horizontal"
             android:orientation="vertical"
-            android:paddingTop="100dp">
+            android:paddingTop="90dp">
 
             <Button
                 android:id="@+id/btnLoginRegister"
                 android:layout_width="240dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/custom_btn_oval_blue"
-                android:text="Log In"
+                android:text="@string/login"
                 android:textSize="25sp"
-                app:backgroundTint="@null"
-                tools:ignore="HardcodedText" />
+                app:backgroundTint="@null" />
 
             <Button
                 android:id="@+id/btnSignUpRegister"
@@ -55,11 +52,10 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:background="@drawable/custom_btn_oval_light_blue"
-                android:text="Sign Up"
+                android:text="@string/sign_up"
                 android:textColor="#2260FF"
                 android:textSize="25sp"
-                app:backgroundTint="@null"
-                tools:ignore="HardcodedText" />
+                app:backgroundTint="@null" />
         </LinearLayout>
     </LinearLayout>
 </FrameLayout>

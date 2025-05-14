@@ -8,7 +8,28 @@
     <string name="numberPhone">PhoneNumber is 10 character long</string>
     <string name="Invalid_date">Invalid date format. Use dd-MM-yyyy</string>
     <string name="default_Image">https://fastly.picsum.photos/id/309/800/800.jpg?hmac=U2W9h89OVgIP8Mi5iFZl-w8iIcqvZ-XOGFyxDkNCXoI</string>
+    <string name="edit_avatar_user">Edit Avatar</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="privacy_policy">Privacy Policy.</string>
+    <string name="and">and</string>
+    <string name="input_full_name">Input Full Name</string>"
+    <string name="by_continuing_you_agree_to">By continuing, you agree to</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="back_register">return screen Register</string>
+    <string name="full_name">Full name</string>
+    <string name="email">Email</string>
+    <string name="input_email_phone_number">Input Email Or Phone Number</string>
+    <string name="input_password">Input Password</string>
+    <string name="login_screen_signIn">Login on screen SignIn</string>
+    <string name="mobile_number">Mobile Number</string>
     <string name="login_google_desc">Login with Google</string>
     <string name="login_facebook_desc">Login with Facebook</string>
     <string name="login_fingerprint_desc">Login with Fingerprint</string>
+    <string name="sign_up_facebook">Sign up with Facebook</string>
+    <string name="sign_up_google">Sign up with Google</string>
+    <string name="sign_up_fingerprint">Sign up with Fingerprint</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="example_example_com">example@example.com</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="dd_mm_yy">DD/MM/YY</string>
 </resources>

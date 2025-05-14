@@ -46,7 +46,6 @@
                 android:id="@+id/textNameMovieWatchList"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name"
                 android:textColor="@color/white"
                 android:textSize="15sp"
                 app:layout_constraintTop_toTopOf="parent"
@@ -70,14 +69,13 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/img_star"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <TextView
                         android:id="@+id/numberStarWatchList"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="9.5"
                         android:textColor="#FF8700"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
@@ -94,14 +92,13 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/img_ticket"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <TextView
                         android:id="@+id/tvTicket"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="Action"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
@@ -118,14 +115,13 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/img_calendar"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <TextView
                         android:id="@+id/tvCalendarWatchList"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="2019"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />
@@ -142,14 +138,13 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         android:src="@drawable/img_clock"
-                        tools:ignore="ContentDescription" />
+                        tools:ignore="ContentDescription,ImageContrastCheck" />
 
                     <TextView
                         android:id="@+id/tvClock"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="5dp"
-                        android:text="120 minutes"
                         android:textColor="@color/white"
                         android:textSize="12sp"
                         tools:ignore="HardcodedText" />

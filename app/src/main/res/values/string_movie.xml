@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="formatStar">Rating: %1$.1f</string>
+    <string name="formatStar">%1$.1f</string>
     <string name="pointAuthor">0.0</string>
     <string name="first_Url_Image">0.0</string>
     <string name="null_screen">Invalid view type</string>
@@ -8,7 +8,7 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="enter_password">Enter password</string>
     <string name="welcome">Welcome</string>
-    <string name="login">Login</string>
+    <string name="login">Log In</string>
     <string name="hello">Hello</string>
     <string name="now_playing">Now Playing</string>
     <string name="view_all">View all</string>
@@ -21,7 +21,6 @@
     <string name="sign_up">Sign Up</string>
     <string name="don_account">Don’t have an account?</string>
     <string name="or_login_with">or login with</string>
-    <string name="log_in">Log In</string>
     <string name="search">Search</string>
     <string name="watch_list">Watch List</string>
     <string name="detail">Detail</string>
@@ -38,4 +37,10 @@
     <string name="list_nowPlay_movies">List Movies Now Play</string>
     <!--Now movie-->
     <string name="list_trending_movies">List Movies Now Play</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <!--Search Movie-->
+    <string name="main_search">Searched movie content</string>
+    <!--Watch List Movie-->
+    <string name="favorite_movie_list">Favorite Movie List</string>
 </resources>

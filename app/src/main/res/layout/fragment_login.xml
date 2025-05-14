@@ -100,77 +100,47 @@
 
             <TextView
                 android:id="@+id/ctEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
+                style="@style/CustomTextView"
                 android:text="@string/email_or_mobile_number"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/text1"
-                tools:ignore="MissingConstraints"
-                tools:layout_editor_absoluteX="2dp" />
+                tools:ignore="MissingConstraints" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tEmail"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:errorIconTint="@color/custom_error_color"
-                app:errorTextColor="@color/custom_error_color"
-                app:helperTextEnabled="false"
+                style="@style/CustomEditText"
                 app:layout_constraintTop_toBottomOf="@+id/ctEmail"
-                tools:layout_editor_absoluteX="2dp">
+                app:layout_constraintWidth_max="488dp"
+                tools:ignore="MissingConstraints">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtEmail"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@drawable/custom_edt_rectangle_light_blue"
-                    android:ellipsize="start"
-                    android:maxLines="1"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp"
-                    android:singleLine="true"
+                    style="@style/CustomEditTextIn"
+                    android:hint="@string/input_email_phone_number"
                     android:text="john@mail.com"
-                    android:textColorHint="#809CFF"
                     app:backgroundTint="@null"
                     tools:ignore="HardcodedText" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/ctPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
+                style="@style/CustomTextView"
                 android:text="@string/password"
-                android:textColor="#FFFFFF"
-                android:textSize="18sp"
-                android:textStyle="bold"
                 app:layout_constraintTop_toBottomOf="@+id/tEmail"
-                tools:layout_editor_absoluteX="2dp" />
+                tools:ignore="MissingConstraints" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/tPassword"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:endIconMode="password_toggle"
-                app:errorIconTint="@color/custom_error_color"
-                app:errorTextColor="@color/custom_error_color"
-                app:helperTextEnabled="false"
-                app:hintTextColor="#809CFF"
+                style="@style/CustomEditText"
                 app:layout_constraintTop_toBottomOf="@+id/ctPassword"
-                tools:ignore="HardcodedText"
-                tools:layout_editor_absoluteX="2dp">
+                app:layout_constraintWidth_max="488dp"
+                tools:ignore="MissingConstraints">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edtPassword"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/custom_edt_rectangle_light_blue"
-                    android:importantForAccessibility="no"
+                    style="@style/CustomEditTextIn"
+                    android:hint="@string/input_password"
                     android:inputType="textPassword"
-                    android:paddingHorizontal="8dp"
-                    android:paddingVertical="12dp"
                     android:text="changeme"
                     android:textColorHint="#809CFF"
                     app:backgroundTint="@null"
@@ -185,7 +155,7 @@
                 android:layout_marginTop="2dp"
                 android:layout_marginEnd="5dp"
                 android:text="@string/forget_password"
-                android:textColor="@color/blue2"
+                android:textColor="@color/blue"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tPassword" />
@@ -205,7 +175,8 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="30dp"
                     android:background="@drawable/custom_btn_oval_blue"
-                    android:text="@string/log_in"
+                    android:contentDescription="@string/login_screen_signIn"
+                    android:text="@string/login"
                     android:textColor="@color/white"
                     android:textSize="25sp"
                     app:backgroundTint="@null"

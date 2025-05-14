@@ -18,6 +18,7 @@ import com.example.movies.databinding.FragmentProfileBinding
 import com.example.movies.datastore.DataStoreManagerAuth
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+import androidx.core.net.toUri
 
 class ProfileFragment : Fragment() {
     private lateinit var binding: FragmentProfileBinding
@@ -81,7 +82,7 @@ class ProfileFragment : Fragment() {
             lifecycleScope.launch {
                 dataStoreManagerAuth.clearUserInfo()
             }
-            val deepLink = Uri.parse("movies://register")
+            val deepLink = "movies://register".toUri()
             val navController = requireActivity().findNavController(R.id.fragmentContainerView)
             navController.navigate(deepLink)
         }

@@ -20,7 +20,7 @@
             android:layout_height="100dp"
             android:background="@drawable/custom_btn_circle_light_blue"
             android:scaleType="centerCrop"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription,ImageContrastCheck" />
 
         <TextView
             android:id="@+id/nameUserCast"

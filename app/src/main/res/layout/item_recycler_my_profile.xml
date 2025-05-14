@@ -22,12 +22,13 @@
             android:layout_gravity="start"
             tools:ignore="NestedWeights">
 
-            <Button
+            <ImageView
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_gravity="center"
                 android:background="@drawable/custom_btn_oval_light_blue"
-                app:backgroundTint="@null" />
+                app:backgroundTint="@null"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
 
             <ImageView
                 android:id="@+id/imgIconProfile"
@@ -59,7 +60,7 @@
                 android:layout_gravity="center"
                 android:background="@drawable/btn_back"
                 android:rotation="180"
-                tools:ignore="ContentDescription" />
+                tools:ignore="ContentDescription,ImageContrastCheck" />
         </FrameLayout>
     </LinearLayout>
 

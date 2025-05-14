@@ -7,7 +7,9 @@ import com.example.movies.database.authen.LoginData
 import com.example.movies.database.authen.SignUpData
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
+import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
@@ -23,8 +25,11 @@ class AuthViewModel @Inject constructor(
 
     val currentUser = _currentUser.asStateFlow()
 
-    private val _loginResult = Channel<Boolean>()
-    val loginResult = _loginResult.receiveAsFlow()
+//    private val _loginResult = Channel<Boolean>()
+//    val loginResult = _loginResult.receiveAsFlow()
+
+    private val _loginResult = MutableSharedFlow<Boolean>(replay = 1)
+    val loginResult: SharedFlow<Boolean> = _loginResult
 
     private val _signUpResult = Channel<Boolean>()
     val signUpResult = _signUpResult.receiveAsFlow()
@@ -48,11 +53,21 @@ class AuthViewModel @Inject constructor(
         }
     }
 
+
+
+//    fun login(email: String, password: String) {
+//        val user = _users.value.find { it.email == email && it.password == password }
+//        _currentUser.value = user
+//        viewModelScope.launch {
+//            _loginResult.send(user != null)
+//        }
+//    }
+
     fun login(email: String, password: String) {
         val user = _users.value.find { it.email == email && it.password == password }
         _currentUser.value = user
         viewModelScope.launch {
-            _loginResult.send(user != null)
+            _loginResult.emit(user != null)
         }
     }
 

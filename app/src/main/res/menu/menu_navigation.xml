@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/buttonHome"
-        android:icon="@drawable/btn_home"
-        android:title="Home"
-        tools:ignore="HardcodedText" />
+        android:icon="@drawable/btn_home_24"
+        android:title="@string/home" />
     <item
         android:id="@+id/buttonSearch"
-        android:icon="@drawable/btn_search_home"
-        android:title="Search"
-        tools:ignore="HardcodedText" />
+        android:icon="@drawable/btn_search_24"
+        android:title="@string/search" />
     <item
         android:id="@+id/buttonWatchList"
-        android:icon="@drawable/btn_watchlist"
-        android:title="Watch List"
-        tools:ignore="HardcodedText" />
+        android:icon="@drawable/btn_heart_24"
+        android:title="@string/watch_list" />
     <item
         android:id="@+id/buttonProfile"
-        android:icon="@drawable/btn_profile"
-        android:title="Watch List"
-        tools:ignore="HardcodedText" />
+        android:icon="@drawable/btn_user_24"
+        android:title="@string/profile" />
 </menu>

@@ -164,6 +164,7 @@ class SearchFragment : Fragment() {
                     )
                 }?.sortedByDescending { it.name?.lowercase() } ?: emptyList()
                 val sortedList = when (sortState.field) {
+
                     SortField.EVALUATE -> {
                         if (sortState.direction == SortDirection.ASCENDING) mappedList.sortedBy { it.vote_average }
                         else mappedList.sortedByDescending { it.vote_average }
