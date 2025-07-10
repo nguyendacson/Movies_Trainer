@@ -1,33 +1,36 @@
-### Android ###
+#### Android ###
+#
+## Local configuration file (sdk path, etc)
+#local.properties
+#
+## Log/OS Files
+#*.log
+#
+## Android Studio generated files and folders
+#captures/
+#.externalNativeBuild/
+#.cxx/
+#*.apk
+#output.json
+#
+## IntelliJ
+#*.iml
+#
+## Keystore files
+#*.jks
+#*.keystore
+#
+## Google Services (e.g. APIs or Firebase)
+#google-services.json
+#
+## Android Profiling
+#*.hprof
+#
+## Api
+#src/main/java/com/example/movies/api/
+#
+#### Android Patch ###
+#gen-external-apklibs
 
-# Local configuration file (sdk path, etc)
-local.properties
-
-# Log/OS Files
-*.log
-
-# Android Studio generated files and folders
-captures/
-.externalNativeBuild/
-.cxx/
-*.apk
-output.json
-
-# IntelliJ
-*.iml
-
-# Keystore files
-*.jks
-*.keystore
-
-# Google Services (e.g. APIs or Firebase)
-google-services.json
-
-# Android Profiling
-*.hprof
-
-# Api
-src/main/java/com/example/movies/api/
-
-### Android Patch ###
-gen-external-apklibs
+#Exclude everything
+*
