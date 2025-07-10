@@ -46,6 +46,7 @@ class AuthViewModel @Inject constructor(
             authRepository.getUser().collect { result ->
                 result.onSuccess {
                     _users.value = it
+                    println("Users: $it")
                 }.onFailure {
                     _users.value = emptyList()
                 }

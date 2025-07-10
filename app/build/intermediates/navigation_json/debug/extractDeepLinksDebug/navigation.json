@@ -1,0 +1,60 @@
+[
+  {
+    "name": "register",
+    "navigationXmlIds": [],
+    "deepLinks": [
+      {
+        "schemes": [
+          "movies"
+        ],
+        "host": "register",
+        "port": -1,
+        "path": "/",
+        "sourceFilePosition": {
+          "mSourceFile": {
+            "mDescription": "register.xml"
+          },
+          "mSourcePosition": {
+            "mStartLine": 43,
+            "mStartColumn": 8,
+            "mStartOffset": 1702,
+            "mEndLine": 43,
+            "mEndColumn": 48,
+            "mEndOffset": 1742
+          }
+        },
+        "isAutoVerify": false,
+        "action": "android.intent.action.VIEW"
+      }
+    ]
+  },
+  {
+    "name": "video",
+    "navigationXmlIds": [],
+    "deepLinks": [
+      {
+        "schemes": [
+          "movies"
+        ],
+        "host": "home",
+        "port": -1,
+        "path": "/",
+        "sourceFilePosition": {
+          "mSourceFile": {
+            "mDescription": "video.xml"
+          },
+          "mSourcePosition": {
+            "mStartLine": 12,
+            "mStartColumn": 8,
+            "mStartOffset": 508,
+            "mEndLine": 12,
+            "mEndColumn": 44,
+            "mEndOffset": 544
+          }
+        },
+        "isAutoVerify": false,
+        "action": "android.intent.action.VIEW"
+      }
+    ]
+  }
+]

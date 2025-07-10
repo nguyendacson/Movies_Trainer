@@ -1,0 +1,106 @@
+[
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_search.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_search.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_all_nowplay_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_all_nowplay_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_all_movie_trending.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_all_movie_trending.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_login.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_login.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_recycler_now_playing.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_recycler_now_playing.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_recycler_toprated.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_recycler_toprated.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_watchlist.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_watchlist.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_nav_graph.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_nav_graph.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_all_trending_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_all_trending_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_review_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_review_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/activity_main.xml",
+        "source": "com.example.movies.app-main-60:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_register.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_register.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_watch_list.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_watch_list.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_all_movie_now_play.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_all_movie_now_play.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_review_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_review_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_detail.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_detail.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_home.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_cast_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_cast_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_search.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_search.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_about_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_about_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_trailer.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_trailer.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_filter.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_filter.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_recycler_my_profile.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_recycler_my_profile.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/item_cast_movie.xml",
+        "source": "com.example.movies.app-main-60:/layout/item_cast_movie.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_sign_up.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_sign_up.xml"
+    },
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout/fragment_profile.xml",
+        "source": "com.example.movies.app-main-60:/layout/fragment_profile.xml"
+    }
+]

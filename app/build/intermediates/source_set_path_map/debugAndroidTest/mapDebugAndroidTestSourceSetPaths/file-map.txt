@@ -1,0 +1,6 @@
+com.example.movies.test.app-tracing-1.2.0-0 C:\Users\son.nd1_extremevn\.gradle\caches\8.10.2\transforms\3de32e21a1dcd9dfd736c2c76bb9af78\transformed\tracing-1.2.0\res
+com.example.movies.test.app-core-1.6.1-1 C:\Users\son.nd1_extremevn\.gradle\caches\8.10.2\transforms\fffa85b82e614f2f7f08ff1152682fe2\transformed\core-1.6.1\res
+com.example.movies.test.app-androidTest-2 C:\Users\son.nd1_extremevn\Desktop\App\Movies\app\build\generated\res\resValues\androidTest\debug
+com.example.movies.test.app-mergeDebugAndroidTestResources-3 C:\Users\son.nd1_extremevn\Desktop\App\Movies\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.movies.test.app-mergeDebugAndroidTestResources-4 C:\Users\son.nd1_extremevn\Desktop\App\Movies\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.movies.test.app-debugAndroidTest-5 C:\Users\son.nd1_extremevn\Desktop\App\Movies\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

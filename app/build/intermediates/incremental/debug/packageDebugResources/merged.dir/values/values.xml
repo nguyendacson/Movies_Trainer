@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="blue">#008CFF</color>
+    <color name="blue2">#22B2FF</color>
+    <color name="blue3">#809CFF</color>
+    <color name="custom_error_color">#F0AC49</color>
+    <color name="gray">#808080</color>
+    <color name="green">#98FB98</color>
+    <color name="light_blue">#CAD6FF</color>
+    <color name="light_gray">#CCCCCC</color>
+    <color name="menuBeforeDetail">#92929D</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_blue">#ECF1FF</color>
+    <string name="Characters_long">Must be 10 characters long</string>
+    <string name="Characters_longMessage">%s Must be 6 characters long</string>
+    <string name="Fails">%s Fails</string>
+    <string name="Invalid_date">Invalid date format. Use dd-MM-yyyy</string>
+    <string name="Required">%s is required</string>
+    <string name="Success">%s Success</string>
+    <string name="_2">2</string>
+    <string name="about_movie">About Movie</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="and">and</string>
+    <string name="app_name">Movies</string>
+    <string name="back_register">return screen Register</string>
+    <string name="by_continuing_you_agree_to">By continuing, you agree to</string>
+    <string name="cast">Cast</string>
+    <string name="content_login">Welcome to the app Movies!</string>
+    <string name="convert_data">%.1f</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="dd_mm_yy">DD/MM/YY</string>
+    <string name="default_Image">https://fastly.picsum.photos/id/309/800/800.jpg?hmac=U2W9h89OVgIP8Mi5iFZl-w8iIcqvZ-XOGFyxDkNCXoI</string>
+    <string name="detail">Detail</string>
+    <string name="don_account">Don’t have an account?</string>
+    <string name="edit_avatar_user">Edit Avatar</string>
+    <string name="email">Email</string>
+    <string name="email_or_mobile_number">Email or Mobile Number</string>
+    <string name="enter_password">Enter password</string>
+    <string name="example_example_com">example@example.com</string>
+    <string name="factory">Unknown %s Class</string>
+    <string name="favorite_movie_list">Favorite Movie List</string>
+    <string name="first_Url_Image">0.0</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="formatStar">%1$.1f</string>
+    <string name="full_name">Full name</string>
+    <string name="hello">Hello</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hint_input">" "</string>
+    <string name="home">Home</string>
+    <string name="input_email_phone_number">Input Email Or Phone Number</string>
+    <string name="input_full_name">Input Full Name</string>
+    <string name="input_password">Input Password</string>
+    <string name="list_nowPlay_movies">List Movies Now Play</string>
+    <string name="list_trending_movies">List Movies Now Play</string>
+    <string name="login">Log In</string>
+    <string name="login_facebook_desc">Login with Facebook</string>
+    <string name="login_fingerprint_desc">Login with Fingerprint</string>
+    <string name="login_google_desc">Login with Google</string>
+    <string name="login_screen_signIn">Login on screen SignIn</string>
+    <string name="main_search">Searched movie content</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="null_data">--</string>
+    <string name="null_screen">Invalid view type</string>
+    <string name="numberPhone">PhoneNumber is 10 character long</string>
+    <string name="or_login_with">or login with</string>
+    <string name="password">Password</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="pointAuthor">0.0</string>
+    <string name="privacy_policy">Privacy Policy.</string>
+    <string name="profile">Profile</string>
+    <string name="reviews">Reviews</string>
+    <string name="search">Search</string>
+    <string name="search_filters">Search filters</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="sign_up_facebook">Sign up with Facebook</string>
+    <string name="sign_up_fingerprint">Sign up with Fingerprint</string>
+    <string name="sign_up_google">Sign up with Google</string>
+    <string name="sort_by">Sort by</string>
+    <string name="terms_of_use">Terms of Use</string>
+    <string name="trending">Trending</string>
+    <string name="type">Type</string>
+    <string name="view_all">View all</string>
+    <string name="watch_list">Watch List</string>
+    <string name="welcome">Welcome</string>
+    <style name="Base.Theme.Movies" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="CustomEditText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="hintEnabled">false</item>
+        <item name="android:layout_marginTop">3dp</item>
+        <item name="errorIconTint">@color/custom_error_color</item>
+        <item name="errorTextColor">@color/custom_error_color</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintWidth_max">488dp</item>
+    </style>
+    <style name="CustomEditTextIn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/custom_edt_rectangle_light_blue</item>
+        <item name="android:ellipsize">start</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:paddingHorizontal">8dp</item>
+        <item name="android:paddingVertical">12dp</item>
+        <item name="android:textColorHint">@color/blue3</item>
+    </style>
+    <style name="CustomTextMovie">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="CustomTextProfile">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="CustomTextView">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginStart">10dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintWidth_max">488dp</item>
+    </style>
+    <style name="CustomTextViewStyle">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="Theme.Movies" parent="Base.Theme.Movies"/>
+</resources>

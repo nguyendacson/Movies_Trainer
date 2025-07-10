@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ui.RegisterFragment">
+
+    <LinearLayout
+        android:id="@+id/layoutContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/custom_bg_all_screen"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.8"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/img_waiting"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="90dp">
+
+            <Button
+                android:id="@+id/btnLoginRegister"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn_oval_blue"
+                android:text="@string/login"
+                android:textSize="25sp"
+                app:backgroundTint="@null" />
+
+            <Button
+                android:id="@+id/btnSignUpRegister"
+                android:layout_width="240dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/custom_btn_oval_light_blue"
+                android:text="@string/sign_up"
+                android:textColor="#2260FF"
+                android:textSize="25sp"
+                app:backgroundTint="@null" />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "com.example.movies.app-mergeDebugResources-57:/layout-sw600dp-v13/fragment_nav_graph.xml",
+        "source": "com.example.movies.app-main-60:/layout-sw600dp/fragment_nav_graph.xml"
+    }
+]
